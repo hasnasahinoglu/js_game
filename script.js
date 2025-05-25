@@ -431,8 +431,7 @@ let gameOver = false;
 // Zaman ve zorluk sistemi için değişkenler
 let gameStartTime = 0; // Şimdilik zaman tabanlı zorluk
 let nextIngredientIndex = 1; // Sıradaki malzemenin indeksi
-//const SCORE_PER_SECOND = 1; // Saniyede 1 puan
-const SCORE_THRESHOLDS = [10, 20, 30, 40, 50]; // Her malzeme için gerekli skorlar
+const SCORE_THRESHOLDS = [20, 40, 60, 80, 100]; // Her malzeme için gerekli skorlar
 let difficulty = 0;
 
 // Not kartları için gerekli değişkenler
@@ -606,7 +605,7 @@ function drawGameOverScreen() {
     ctx.strokeRect(restartButton.x, restartButton.y, restartButton.width, restartButton.height);
     
     ctx.font = "20px Arial";
-    ctx.fillText("Click to play again", canvasWidth / 2, restartButton.y + 25);
+    ctx.fillText("Tekrar Oyna", canvasWidth / 2, restartButton.y + 25);
     
     // Buton bilgisini global olarak sakla (mouse tıklamasında kontrol için)
     window.restartButton = restartButton;
@@ -782,7 +781,7 @@ function updateGameProgression() {
     
 }
 
-/*
+
 function checkForNewIngredient() {
     //Eklenecek malzeme var mı
     if (nextIngredientIndex < randomGameIngredients.length) {
@@ -792,33 +791,13 @@ function checkForNewIngredient() {
         if (thresholdIndex < SCORE_THRESHOLDS.length && 
             score >= SCORE_THRESHOLDS[thresholdIndex]) {
             
-            //addNextIngredient();
-            //nextIngredientIndex++;
-        
-            
-        
-        if (difficulty === 0){
-            console.log("dif"+difficulty);
             addNextIngredient();
             nextIngredientIndex++;
-        }
-        else if(difficulty ===1){
-            console.log("dif"+difficulty);
-            addNextIngredient();
-            nextIngredientIndex++;
-        }
-        else if (difficulty === 2){
-            console.log("dif"+difficulty);
-            addNewNoteCard(randomNumbers[0]);
-        }
         }
     }
 }
-    */
 
-function checkForNewIngredient(){
 
-}
 
 // Sıradaki malzemeyi current'e ekle
 function addNextIngredient() {
@@ -894,7 +873,7 @@ function orderType2(){
     context = context.trim();
     return { context, ingredientList};
 }
-
+/*
 function orderType3(){
     // num item
     // num item
@@ -924,7 +903,7 @@ function orderType3(){
 
     return { context, ingredientList};
 }
-
+*/
 function createOrderContent(){
     let context, ingredientList;
     let randomNum = Math.floor(Math.random() * 3);  // 0-2
@@ -938,20 +917,10 @@ function createOrderContent(){
         return randomNum === 0 ? orderType0() : orderType1();
     }
 
-    else if(difficulty === 2){
+    else {
         if(randomNum === 0) return orderType0();
         if(randomNum === 1) return orderType1();
         return orderType2();
-    }
-    else if(difficulty===3){
-        console.log("difficulty"+difficulty);
-        return orderType3();
-    }
-
-    // SIMDILIK SON DURUM TEKRARLANIYOR
-    else
-        {console.log("diFFFFFFFfficulty"+difficulty);
-        return orderType3();    
     }
 
 }
