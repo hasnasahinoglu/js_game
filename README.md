@@ -27,7 +27,7 @@ Her siparişi doğru yorumlayarak hazırlamalı, müşterileri memnun etmelisin.
 
 Malzemeleri siparişlerin üzerine sürükle-bırak.
 
---
+---
 
 ## 🖼️ OYUN GÖRSELLERİ
 
