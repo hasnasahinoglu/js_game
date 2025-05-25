@@ -32,10 +32,10 @@ Malzemeleri siparişlerin üzerine sürükle-bırak.
 ## 🖼️ OYUN GÖRSELLERİ
 
 ### 🧩 Siparişin geldiği an:
-![OyunEkranı1](/js_game/assets/screenshots/ss1.png)
+![OyunEkranı1](assets/screenshots/ss1.png)
 
 ### 🍔 Malzeme seçimi ve burger hazırlama:
-![OyunEkranı2](/js_game/assets/screenshots/ss2.png)
+![OyunEkranı2](assets/screenshots/ss2.png)
 
 
 ---
