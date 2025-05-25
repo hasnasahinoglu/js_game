@@ -45,6 +45,6 @@ Malzemeleri siparişlerin üzerine sürükle-bırak.
 Oyunu yerel olarak çalıştırmak için:
 
 ```bash
-git clone https://github.com/hasnasahinoglu/js_game_project.git
+git clone https://github.com/hasnasahinoglu/js_game.git
 cd js_game_project
 open index.html
